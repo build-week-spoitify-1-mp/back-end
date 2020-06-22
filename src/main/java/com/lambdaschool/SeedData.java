@@ -1,4 +1,4 @@
-package com.lambdaschool.spotify;
+package com.lambdaschool;
 
 import com.lambdaschool.spotify.models.*;
 import com.lambdaschool.spotify.services.*;
@@ -20,15 +20,7 @@ import java.util.ArrayList;
 public class SeedData
         implements CommandLineRunner
 {
-    /**
-     * Connects the Role Service to this process
-     */
-    @Autowired
-    RoleService roleService;
 
-    /**
-     * Connects the user service to this process
-     */
     @Autowired
     UserService userService;
 
@@ -47,29 +39,9 @@ public class SeedData
             throws
             Exception
     {
-        /************
-         * Seed Users
-         ************/
-        Role r1 = new Role("admin");
-        Role r2 = new Role("user");
-        Role r3 = new Role("data");
-
-        r1 = roleService.save(r1);
-        r2 = roleService.save(r2);
-        r3 = roleService.save(r3);
-
-        // admin, data, user
-        ArrayList<UserRoles> admins = new ArrayList<>();
-        admins.add(new UserRoles(new User(),
-                r1));
-        admins.add(new UserRoles(new User(),
-                r2));
-        admins.add(new UserRoles(new User(),
-                r3));
         User u1 = new User("admin",
                 "password",
                 "admin@lambdaschool.local");
         userService.save(u1);
-
     }
 }

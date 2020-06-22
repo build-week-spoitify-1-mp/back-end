@@ -29,7 +29,7 @@ public class Swagger2Config
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                              .basePackage("com.lambdaschool.usermodel"))
+                              .basePackage("com.lambdaschool.spotify"))
                 .paths(PathSelectors.regex("/.*"))
                 .build()
                 .useDefaultResponseMessages(false) // Allows only my exception responses
@@ -49,7 +49,7 @@ public class Swagger2Config
                                      "http://www.lambdaschool.com",
                                      "john@lambdaschool.com"))
                 .license("MIT")
-                .licenseUrl("https://github.com/LambdaSchool/java-usermodel/blob/master/LICENSE")
+                .licenseUrl("https://github.com/LambdaSchool/java-spotify/blob/master/LICENSE")
                 .version("1.0.0")
                 .build();
     }

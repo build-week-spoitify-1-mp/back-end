@@ -21,17 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="02a892e5-b7ea-4470-b940-5be75b19929c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/SeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/SeedData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/SeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/SeedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/config/Swagger2Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/OpenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/OpenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/RolesController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/controllers/UseremailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/ErrorDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/ErrorDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/Role.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/Useremail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/repositories/UseremailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/UserMinimum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/UserMinimum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/models/UserRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/repositories/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UseremailService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/services/UseremailServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +81,7 @@
       <recent name="com.lambdaschool.spotify" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lambdaschool.spotify.controllers" />
       <recent name="com.lambdaschool" />
       <recent name="com.lambdaschool.spotify.models" />
     </key>
@@ -106,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592854236175</updated>
-      <workItem from="1592854240461" duration="3722000" />
+      <workItem from="1592854240461" duration="9745000" />
     </task>
     <servers />
   </component>
@@ -136,45 +142,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592856315875" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592856562641">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592862340588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592856562641" />
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1592857884343">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862340588" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884343" />
-    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1592857884343">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884343" />
-    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1592857884343">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884343" />
-    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1592857884343">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884343" />
-    <state width="1860" height="279" key="GridCell.Tab.1.bottom" timestamp="1592857884344">
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.1.bottom" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884344" />
-    <state width="1860" height="279" key="GridCell.Tab.1.center" timestamp="1592857884344">
+    <state width="1877" height="279" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.1.center" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884344" />
-    <state width="1860" height="279" key="GridCell.Tab.1.left" timestamp="1592857884343">
+    <state width="1877" height="279" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.1.left" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884343" />
-    <state width="1860" height="279" key="GridCell.Tab.1.right" timestamp="1592857884344">
+    <state width="1877" height="279" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state width="1877" height="279" key="GridCell.Tab.1.right" timestamp="1592862849604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="279" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592857884344" />
-    <state x="667" y="224" width="585" height="592" key="find.popup" timestamp="1592855903452">
+    <state width="1877" height="279" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862849604" />
+    <state x="667" y="224" width="585" height="592" key="find.popup" timestamp="1592862785172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="224" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592855903452" />
+    <state x="667" y="224" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862785172" />
   </component>
 </project>

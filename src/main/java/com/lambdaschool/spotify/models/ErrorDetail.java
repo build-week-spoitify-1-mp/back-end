@@ -38,7 +38,7 @@ public class ErrorDetail
     /**
      * If data validation errors caused this error, the list of them will appear here.
      */
-    private List<com.lambdaschool.spotify.models.ValidationError> errors = new ArrayList<>();
+    private List<ValidationError> errors = new ArrayList<>();
 
     /**
      * Default constructor for this class

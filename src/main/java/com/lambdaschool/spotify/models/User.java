@@ -67,14 +67,6 @@ public class User
     private String email;
 
 
-    @ApiModelProperty(name = "roles",
-            value = "List of user roles for this users")
-    @OneToMany(mappedBy = "user",
-            cascade = CascadeType.ALL)
-    @JsonIgnoreProperties(value = "user",
-            allowSetters = true)
-    private List<UserRoles> roles = new ArrayList<>();
-
     public User()
     {
     }
@@ -148,34 +140,13 @@ public class User
         this.password = passwordEncoder.encode(password);
     }
 
-    public List<com.lambdaschool.spotify.models.UserRoles> getRoles()
-    {
-        return roles;
-    }
-
-    public void setRoles(List<com.lambdaschool.spotify.models.UserRoles> roles)
-    {
-        this.roles = roles;
-    }
-
-    public void addRole(com.lambdaschool.spotify.models.Role role)
-    {
-        roles.add(new com.lambdaschool.spotify.models.UserRoles(this,
-                                role));
-    }
-
     @JsonIgnore
     public List<SimpleGrantedAuthority> getAuthority()
     {
         List<SimpleGrantedAuthority> rtnList = new ArrayList<>();
 
-        for (com.lambdaschool.spotify.models.UserRoles r : this.roles)
-        {
-            String myRole = "ROLE_" + r.getRole()
-                    .getName()
-                    .toUpperCase();
-            rtnList.add(new SimpleGrantedAuthority(myRole));
-        }
+        String myRole = "ROLE_USER";
+        rtnList.add(new SimpleGrantedAuthority(myRole));
 
         return rtnList;
     }

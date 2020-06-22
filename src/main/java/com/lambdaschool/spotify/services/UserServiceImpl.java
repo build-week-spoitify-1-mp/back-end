@@ -3,9 +3,7 @@ package com.lambdaschool.spotify.services;
 import com.lambdaschool.spotify.exceptions.ResourceFoundException;
 import com.lambdaschool.spotify.exceptions.ResourceNotFoundException;
 import com.lambdaschool.spotify.handlers.HelperFunctions;
-import com.lambdaschool.spotify.models.Role;
 import com.lambdaschool.spotify.models.User;
-import com.lambdaschool.spotify.models.UserRoles;
 import com.lambdaschool.spotify.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,19 +18,13 @@ import java.util.List;
 @Transactional
 @Service(value = "userService")
 public class UserServiceImpl
-        implements com.lambdaschool.spotify.services.UserService
+        implements UserService
 {
     /**
      * Connects this service to the User table.
      */
     @Autowired
     private UserRepository userrepos;
-
-    /**
-     * Connects this service to the Role table
-     */
-    @Autowired
-    private com.lambdaschool.spotify.services.RoleService roleService;
 
     /**
      * Connects this service to the auditing service in order to get current user name
@@ -105,14 +97,6 @@ public class UserServiceImpl
             User oldUser = userrepos.findById(user.getUserid())
                     .orElseThrow(() -> new ResourceNotFoundException("User id " + user.getUserid() + " not found!"));
 
-            // delete the roles for the old user we are replacing
-            for (UserRoles ur : oldUser.getRoles())
-            {
-                deleteUserRole(ur.getUser()
-                                       .getUserid(),
-                               ur.getRole()
-                                       .getRoleid());
-            }
             newUser.setUserid(user.getUserid());
         }
 
@@ -122,27 +106,6 @@ public class UserServiceImpl
         newUser.setEmail(user.getEmail()
                                         .toLowerCase());
 
-        newUser.getRoles()
-                .clear();
-        if (user.getUserid() == 0)
-        {
-            for (UserRoles ur : user.getRoles())
-            {
-                Role newRole = roleService.findRoleById(ur.getRole()
-                                                                .getRoleid());
-
-                newUser.addRole(newRole);
-            }
-        } else
-        {
-            // add the new roles for the user we are replacing
-            for (UserRoles ur : user.getRoles())
-            {
-                addUserRole(newUser.getUserid(),
-                            ur.getRole()
-                                    .getRoleid());
-            }
-        }
 
         return userrepos.save(newUser);
     }
@@ -174,27 +137,6 @@ public class UserServiceImpl
                                                     .toLowerCase());
             }
 
-            if (user.getRoles()
-                    .size() > 0)
-            {
-                // delete the roles for the old user we are replacing
-                for (UserRoles ur : currentUser.getRoles())
-                {
-                    deleteUserRole(ur.getUser()
-                                           .getUserid(),
-                                   ur.getRole()
-                                           .getRoleid());
-                }
-
-                // add the new roles for the user we are replacing
-                for (UserRoles ur : user.getRoles())
-                {
-                    addUserRole(currentUser.getUserid(),
-                                ur.getRole()
-                                        .getRoleid());
-                }
-            }
-
             return userrepos.save(currentUser);
         } else
         {
@@ -206,49 +148,5 @@ public class UserServiceImpl
         }
     }
 
-    @Transactional
-    @Override
-    public void deleteUserRole(
-            long userid,
-            long roleid)
-    {
-        userrepos.findById(userid)
-                .orElseThrow(() -> new ResourceNotFoundException("User id " + userid + " not found!"));
-        roleService.findRoleById(roleid);
 
-        if (userrepos.checkUserRolesCombo(userid,
-                                          roleid)
-                .getCount() > 0)
-        {
-            userrepos.deleteUserRoles(userid,
-                                      roleid);
-        } else
-        {
-            throw new ResourceNotFoundException("Role and User Combination Does Not Exists");
-        }
-    }
-
-    @Transactional
-    @Override
-    public void addUserRole(
-            long userid,
-            long roleid)
-    {
-        userrepos.findById(userid)
-                .orElseThrow(() -> new ResourceNotFoundException("User id " + userid + " not found!"));
-        roleService.findRoleById(roleid);
-
-        if (userrepos.checkUserRolesCombo(userid,
-                                          roleid)
-                .getCount() <= 0)
-        {
-            userrepos.insertUserRoles(userAuditing.getCurrentAuditor()
-                                              .get(),
-                                      userid,
-                                      roleid);
-        } else
-        {
-            throw new ResourceFoundException("Role and User Combination Already Exists");
-        }
-    }
 }
