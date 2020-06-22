@@ -6,7 +6,6 @@ import com.lambdaschool.spotify.handlers.HelperFunctions;
 import com.lambdaschool.spotify.models.Role;
 import com.lambdaschool.spotify.models.User;
 import com.lambdaschool.spotify.models.UserRoles;
-import com.lambdaschool.spotify.models.Useremail;
 import com.lambdaschool.spotify.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -120,7 +119,7 @@ public class UserServiceImpl
         newUser.setUsername(user.getUsername()
                                     .toLowerCase());
         newUser.setPasswordNoEncrypt(user.getPassword());
-        newUser.setPrimaryemail(user.getPrimaryemail()
+        newUser.setEmail(user.getEmail()
                                         .toLowerCase());
 
         newUser.getRoles()
@@ -143,15 +142,6 @@ public class UserServiceImpl
                             ur.getRole()
                                     .getRoleid());
             }
-        }
-
-        newUser.getUseremails()
-                .clear();
-        for (Useremail ue : user.getUseremails())
-        {
-            newUser.getUseremails()
-                    .add(new Useremail(newUser,
-                                       ue.getUseremail()));
         }
 
         return userrepos.save(newUser);
@@ -178,9 +168,9 @@ public class UserServiceImpl
                 currentUser.setPasswordNoEncrypt(user.getPassword());
             }
 
-            if (user.getPrimaryemail() != null)
+            if (user.getEmail() != null)
             {
-                currentUser.setPrimaryemail(user.getPrimaryemail()
+                currentUser.setEmail(user.getEmail()
                                                     .toLowerCase());
             }
 
@@ -202,19 +192,6 @@ public class UserServiceImpl
                     addUserRole(currentUser.getUserid(),
                                 ur.getRole()
                                         .getRoleid());
-                }
-            }
-
-            if (user.getUseremails()
-                    .size() > 0)
-            {
-                currentUser.getUseremails()
-                        .clear();
-                for (Useremail ue : user.getUseremails())
-                {
-                    currentUser.getUseremails()
-                            .add(new Useremail(currentUser,
-                                               ue.getUseremail()));
                 }
             }
 

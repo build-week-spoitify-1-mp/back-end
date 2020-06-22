@@ -28,23 +28,13 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController
 {
-    /**
-     * Using the User service to process user data
-     */
+
     @Autowired
     private UserService userService;
 
-    /**
-     * Returns a list of all users
-     * <br>Example: <a href="http://localhost:2019/users/users">http://localhost:2019/users/users</a>
-     *
-     * @return JSON list of all users with a status of OK
-     * @see UserService#findAll() UserService.findAll()
-     */
     @ApiOperation(value = "returns all Users",
             response = User.class,
             responseContainer = "List")
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/users",
             produces = {"application/json"})
     public ResponseEntity<?> listAllUsers()
@@ -54,14 +44,6 @@ public class UserController
                                     HttpStatus.OK);
     }
 
-    /**
-     * Returns a single user based off a user id number
-     * <br>Example: <a href="http://localhost:2019/users/user/7">http://localhost:2019/users/user/7</a>
-     *
-     * @param userId The primary key of the user you seek
-     * @return JSON object of the user you seek
-     * @see UserService#findUserById(long) UserService.findUserById(long)
-     */
     @ApiOperation(value = "Retrieve a user based of off user id",
             response = User.class)
     @ApiResponses(value = {@ApiResponse(code = 200,
@@ -69,7 +51,6 @@ public class UserController
             response = User.class), @ApiResponse(code = 404,
             message = "User Not Found",
             response = ErrorDetail.class)})
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/{userId}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserById(
@@ -84,14 +65,6 @@ public class UserController
                                     HttpStatus.OK);
     }
 
-    /**
-     * Return a user object based on a given username
-     * <br>Example: <a href="http://localhost:2019/users/user/name/cinnamon">http://localhost:2019/users/user/name/cinnamon</a>
-     *
-     * @param userName the name of user (String) you seek
-     * @return JSON object of the user you seek
-     * @see UserService#findByName(String) UserService.findByName(String)
-     */
     @ApiOperation(value = "returns the user with the given username",
             response = User.class)
     @ApiResponses(value = {@ApiResponse(code = 200,
@@ -99,7 +72,6 @@ public class UserController
             response = User.class), @ApiResponse(code = 404,
             message = "User Not Found",
             response = ErrorDetail.class)})
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/name/{userName}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserByName(
@@ -114,21 +86,12 @@ public class UserController
                                     HttpStatus.OK);
     }
 
-    /**
-     * Returns a list of users whose username contains the given substring
-     * <br>Example: <a href="http://localhost:2019/users/user/name/like/da">http://localhost:2019/users/user/name/like/da</a>
-     *
-     * @param userName Substring of the username for which you seek
-     * @return A JSON list of users you seek
-     * @see UserService#findByNameContaining(String) UserService.findByNameContaining(String)
-     */
     @ApiOperation(value = "returns all Users whose username contains the given substring",
             response = User.class,
             responseContainer = "List")
     @ApiParam(value = "User Name Substring",
             required = true,
             example = "john")
-    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping(value = "/user/name/like/{userName}",
             produces = {"application/json"})
     public ResponseEntity<?> getUserLikeName(
@@ -140,17 +103,6 @@ public class UserController
                                     HttpStatus.OK);
     }
 
-    /**
-     * Given a complete User Object, create a new User record and accompanying useremail records
-     * and user role records.
-     * <br> Example: <a href="http://localhost:2019/users/user">http://localhost:2019/users/user</a>
-     *
-     * @param newuser A complete new user to add including emails and roles.
-     *                roles must already exist.
-     * @return A location header with the URI to the newly created user and a status of CREATED
-     * @throws URISyntaxException Exception if something does not work in creating the location header
-     * @see UserService#save(User) UserService.save(User)
-     */
     @ApiOperation(value = "adds a user given in the request body",
             response = Void.class)
     @ApiResponses(value = {@ApiResponse(code = 200,
@@ -158,7 +110,7 @@ public class UserController
             response = User.class), @ApiResponse(code = 404,
             message = "User Not Found",
             response = ErrorDetail.class)})
-    @PostMapping(value = "/user",
+    @PostMapping(value = "/createnewuser",
             consumes = {"application/json"})
     public ResponseEntity<?> addNewUser(
             @Valid
@@ -183,18 +135,6 @@ public class UserController
                                     HttpStatus.CREATED);
     }
 
-    /**
-     * Given a complete User Object
-     * Given the user id, primary key, is in the User table,
-     * replace the User record , user role combinations and Useremail records.
-     * <br> Example: <a href="http://localhost:2019/users/user/15">http://localhost:2019/users/user/15</a>
-     *
-     * @param updateUser A complete User including all emails and roles to be used to
-     *                   replace the User. Roles must already exist.
-     * @param userid     The primary key of the user you wish to replace.
-     * @return status of OK
-     * @see UserService#save(User) UserService.save(User)
-     */
     @ApiOperation(value = "updates a user given in the request body",
             response = Void.class)
     @ApiResponses(value = {@ApiResponse(code = 200,
