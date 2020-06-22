@@ -112,7 +112,7 @@
     </dependencies>
 
     <build>
-        <finalName>spotify</finalName>
+        <finalName>bw-spotify1-mp</finalName>
 
         <plugins>
             <plugin>
