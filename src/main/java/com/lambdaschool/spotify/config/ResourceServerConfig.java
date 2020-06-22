@@ -50,8 +50,7 @@ public class ResourceServerConfig
                       "/swagger-resource/**",
                       "/swagger-ui.html",
                       "/v2/api-docs",
-                      "/webjars/**",
-                      "/createnewuser")
+                      "/webjars/**")
               .permitAll()
               .antMatchers(HttpMethod.POST,
                       "/users/**")
@@ -63,7 +62,6 @@ public class ResourceServerConfig
                       "/users/**")
               .hasAnyRole("ADMIN")
               .antMatchers("/users/**",
-                      "/useremails/**",
                       "/oauth/revoke-token",
                       "/logout")
               .authenticated()

@@ -1,4 +1,4 @@
-package com.lambdaschool;
+package com.lambdaschool.spotify;
 
 import com.lambdaschool.spotify.models.*;
 import com.lambdaschool.spotify.services.*;
@@ -39,9 +39,9 @@ public class SeedData
             throws
             Exception
     {
-        User u1 = new User("admin",
+        User u1 = new User("test user",
                 "password",
-                "admin@lambdaschool.local");
+                "testuser@lambdaschool.local");
         userService.save(u1);
     }
 }
