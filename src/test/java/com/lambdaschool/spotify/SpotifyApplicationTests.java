@@ -1,4 +1,4 @@
-package com.example.spotify;
+package com.lambdaschool.spotify;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
