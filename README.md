@@ -51,4 +51,17 @@ POST: "/favesongs/user/{userid}/favesong/{trackid}" = adds a new trackid to the 
 }
 <!-- delete a fave song -->
 DELETE: "/favesongs/favesong/{favesongid}" = deletes a fave song by the favesongid(auth required)
+<!-- for Axios with auth -->
 
+headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+         }
+<!-- FOR login -->
+axios
+        .post('https://bw-spotify1-mp.herokuapp.com/users/createnewuser', `grant_type=password&username=${credentials.username}&password=${credentials.password}&email=${credentials.email}`, {
+            headers: {
+            // btoa is converting our client id/client secret into base64
+            Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,
+            'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }
