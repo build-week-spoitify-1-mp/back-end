@@ -55,13 +55,18 @@ public class ResourceServerConfig
               .antMatchers(HttpMethod.POST,
                       "/users/**")
               .permitAll()
+              .antMatchers(HttpMethod.POST,
+                      "/favesongs/**")
+              .authenticated()
               .antMatchers(HttpMethod.DELETE,
-                      "/users/**")
-              .hasAnyRole("ADMIN")
+                      "/users/**",
+                      "/favesongs/**")
+              .authenticated()
               .antMatchers(HttpMethod.PUT,
                       "/users/**")
-              .hasAnyRole("ADMIN")
+              .authenticated()
               .antMatchers("/users/**",
+                      "/favesongs/**",
                       "/oauth/revoke-token",
                       "/logout")
               .authenticated()
