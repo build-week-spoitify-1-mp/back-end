@@ -24,15 +24,6 @@ public class SeedData
     @Autowired
     UserService userService;
 
-    /**
-     * Generates test, seed data for our application
-     * First a set of known data is seeded into our database.
-     * Second a random set of data using Java Faker is seeded into our database.
-     * Note this process does not remove data from the database. So if data exists in the database
-     * prior to running this process, that data remains in the database.
-     *
-     * @param args The parameter is required by the parent interface but is not used in this process.
-     */
     @Transactional
     @Override
     public void run(String[] args)
@@ -42,6 +33,13 @@ public class SeedData
         User u1 = new User("test user",
                 "password",
                 "testuser@lambdaschool.local");
+        u1.getFavesongs().add(new Favesong(u1, "a1f52asdf"));
         userService.save(u1);
+
+        User u2 = new User("test user 2",
+                "password",
+                "testuser2@lambdaschool.local");
+        u2.getFavesongs().add(new Favesong(u2, "la1sdfkjad1l"));
+        userService.save(u2);
     }
 }

@@ -66,6 +66,14 @@ public class User
     @Email
     private String email;
 
+    @ApiModelProperty(name = "fave songs",
+            value = "List of fave songs for this user")
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @JsonIgnoreProperties(value = "user",
+            allowSetters = true)
+    private List<Favesong> favesongs = new ArrayList<>();
 
     public User()
     {
@@ -138,6 +146,16 @@ public class User
     {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         this.password = passwordEncoder.encode(password);
+    }
+
+    public List<Favesong> getFavesongs()
+    {
+        return favesongs;
+    }
+
+    public void setFavesongs(List<Favesong> favesongs)
+    {
+        this.favesongs = favesongs;
     }
 
     @JsonIgnore
