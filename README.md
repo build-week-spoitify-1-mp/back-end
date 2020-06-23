@@ -32,36 +32,37 @@ user login =
 <!-- DELETE a user -->
 DELETE: "/users/user/{userid}" = deletes a user by id(auth required)
 
-PUT: "/users/user/{userid} = edits a user
-{
+PUT: `/users/user/{userid}` = edits a user
+`{
     "username": "editedusername",
     "password": "editedpassword",
     "email": "editedusername"
-}
+}`
 <!-- Fave Song Endpoints -->
-GET: "/favesongs/username/{username}" = returns the list fo favesongs associated with current user(auth required)
+GET: `/favesongs/username/{username}` = returns the list fo favesongs associated with current user(auth required)
 
-GET: "/favesongs/favesong/{favesongid} = returns a fave song(auth required)
+GET: `/favesongs/favesong/{favesongid}` = returns a fave song(auth required)
 <!-- add new fave song to a user -->
-POST: "/favesongs/user/{userid}/favesong/{trackid}" = adds a new trackid to the favesongs array to a user(auth required)
+POST: `/favesongs/user/{userid}/favesong/{trackid}` = adds a new trackid to the favesongs array to a user(auth required)
 
 <!-- object requirements to add a trackid -->
 {
     "trackid": "newtrackid"
 }
 <!-- delete a fave song -->
-DELETE: "/favesongs/favesong/{favesongid}" = deletes a fave song by the favesongid(auth required)
+DELETE: `/favesongs/favesong/{favesongid}` = deletes a fave song by the favesongid(auth required)
 <!-- for Axios with auth -->
-
-headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}`
-         }
+axiosWithAuth: 
+`headers: {
+            Authorization: Bearer ${localStorage.getItem('token')}
+         }`
 <!-- FOR login -->
-axios
+LOGIN:
+`axios
         .post('https://bw-spotify1-mp.herokuapp.com/users/createnewuser', `grant_type=password&username=${credentials.username}&password=${credentials.password}&email=${credentials.email}`, {
             headers: {
             // btoa is converting our client id/client secret into base64
             Authorization: `Basic ${btoa('lambda-client:lambda-secret')}`,
             'Content-Type': 'application/x-www-form-urlencoded'
             }
-        }
+        }`
