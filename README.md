@@ -29,7 +29,15 @@ user login =
     "username": "newusername",
     "password": "password",
 }
+<!-- DELETE a user -->
+DELETE: "/users/user/{userid}" = deletes a user by id(auth required)
 
+PUT: "/users/user/{userid} = edits a user
+{
+    "username": "editedusername",
+    "password": "editedpassword",
+    "email": "editedusername"
+}
 <!-- Fave Song Endpoints -->
 GET: "/favesongs/username/{username}" = returns the list fo favesongs associated with current user(auth required)
 
