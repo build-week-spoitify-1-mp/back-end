@@ -31,7 +31,6 @@ public class User
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userid;
 
-
     @ApiModelProperty(name = "User Name",
             value = "Actual user name for sign on",
             required = true,

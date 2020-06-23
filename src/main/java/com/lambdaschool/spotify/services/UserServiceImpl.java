@@ -3,6 +3,7 @@ package com.lambdaschool.spotify.services;
 import com.lambdaschool.spotify.exceptions.ResourceFoundException;
 import com.lambdaschool.spotify.exceptions.ResourceNotFoundException;
 import com.lambdaschool.spotify.handlers.HelperFunctions;
+import com.lambdaschool.spotify.models.Favesong;
 import com.lambdaschool.spotify.models.User;
 import com.lambdaschool.spotify.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,7 +106,11 @@ public class UserServiceImpl
         newUser.setPasswordNoEncrypt(user.getPassword());
         newUser.setEmail(user.getEmail()
                                         .toLowerCase());
-
+newUser.getFavesongs().clear();
+for(Favesong fs : user.getFavesongs())
+{
+    newUser.getFavesongs().add(new Favesong(newUser, fs.getTrackid()));
+}
 
         return userrepos.save(newUser);
     }

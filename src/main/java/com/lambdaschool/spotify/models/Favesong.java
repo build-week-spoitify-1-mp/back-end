@@ -17,10 +17,10 @@ public class Favesong extends Auditable
 
    @NotNull
    @Column(nullable = false)
-   @Email
    private String trackid;
 
    @ManyToOne
+   @NotNull
    @JoinColumn(name = "userid")
    @JsonIgnoreProperties(value = "favesongs",
            allowSetters = true)
