@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a892e5-b7ea-4470-b940-5be75b19929c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SeedData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/services/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SpotifyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SpotifyApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -59,7 +64,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/lambdaschool/spotify/views" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,20 +80,31 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.lambdaschool.spotify.services" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="com.lambdaschool.spotify" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lambdaschool.spotify" />
       <recent name="com.lambdaschool.spotify.controllers" />
       <recent name="com.lambdaschool" />
       <recent name="com.lambdaschool.spotify.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\resources" />
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\java\com\lambdaschool\spotify" />
       <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\views" />
       <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\services" />
       <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\repositories" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\models" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\example\spotify\handlers" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -94,7 +112,87 @@
       <command value="mvn clean heroku:deploy -X" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserServiceImplTest.save">
+    <configuration name="UserServiceImplTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.findByNameContaining" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="findByNameContaining" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.findUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="findUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpotifyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="back-end" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lambdaschool.spotify.SpotifyApplication" />
@@ -102,6 +200,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceImplTest.save" />
+        <item itemvalue="JUnit.UserServiceImplTest.update" />
+        <item itemvalue="JUnit.UserServiceImplTest.findAll" />
+        <item itemvalue="JUnit.UserServiceImplTest.findByNameContaining" />
+        <item itemvalue="JUnit.UserServiceImplTest.findUserById" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -116,7 +223,9 @@
       <workItem from="1592854240461" duration="13818000" />
       <workItem from="1592924567189" duration="18880000" />
       <workItem from="1592949250324" duration="2587000" />
-      <workItem from="1592954702940" duration="1194000" />
+      <workItem from="1592954702940" duration="1766000" />
+      <workItem from="1593012478245" duration="79000" />
+      <workItem from="1593013722725" duration="4993000" />
     </task>
     <servers />
   </component>
@@ -143,10 +252,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592943648666" />
+    <state x="514" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593016918777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="514" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593016918777" />
     <state x="743" y="388" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592865315167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="388" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592865315167" />
+    <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1593016921558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593016921558" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592856315875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,38 +272,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862340588" />
-    <state width="916" height="293" key="GridCell.Tab.0.bottom" timestamp="1592952864170">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom" timestamp="1593020559269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592952864170" />
-    <state width="916" height="293" key="GridCell.Tab.0.center" timestamp="1592952864170">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
+    <state width="1877" height="290" key="GridCell.Tab.0.center" timestamp="1593020559269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="293" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592952864170" />
-    <state width="916" height="293" key="GridCell.Tab.0.left" timestamp="1592952864170">
+    <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
+    <state width="1877" height="290" key="GridCell.Tab.0.left" timestamp="1593020559269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="293" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592952864170" />
-    <state width="916" height="293" key="GridCell.Tab.0.right" timestamp="1592952864170">
+    <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
+    <state width="1877" height="290" key="GridCell.Tab.0.right" timestamp="1593020559269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="293" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592952864170" />
-    <state width="1877" height="293" key="GridCell.Tab.1.bottom" timestamp="1592951644641">
+    <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
+    <state width="1877" height="290" key="GridCell.Tab.1.bottom" timestamp="1593020559266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592951644641" />
-    <state width="1877" height="293" key="GridCell.Tab.1.center" timestamp="1592951644641">
+    <state width="1877" height="290" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
+    <state width="1877" height="290" key="GridCell.Tab.1.center" timestamp="1593020559266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592951644641" />
-    <state width="1877" height="293" key="GridCell.Tab.1.left" timestamp="1592951644641">
+    <state width="1877" height="290" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
+    <state width="1877" height="290" key="GridCell.Tab.1.left" timestamp="1593020559266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592951644641" />
-    <state width="1877" height="293" key="GridCell.Tab.1.right" timestamp="1592951644641">
+    <state width="1877" height="290" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
+    <state width="1877" height="290" key="GridCell.Tab.1.right" timestamp="1593020559266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592951644641" />
+    <state width="1877" height="290" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
+    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593013798201">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593013798201" />
     <state x="667" y="224" width="585" height="592" key="find.popup" timestamp="1592862785172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
