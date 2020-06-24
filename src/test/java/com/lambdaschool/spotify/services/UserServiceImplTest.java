@@ -1,7 +1,6 @@
 package com.lambdaschool.spotify.services;
 
 import com.lambdaschool.spotify.SpotifyApplication;
-import com.lambdaschool.spotify.exceptions.ResourceFoundException;
 import com.lambdaschool.spotify.exceptions.ResourceNotFoundException;
 import com.lambdaschool.spotify.models.Favesong;
 import com.lambdaschool.spotify.models.User;
@@ -13,8 +12,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.persistence.EntityNotFoundException;
 
 import static org.junit.Assert.*;
 

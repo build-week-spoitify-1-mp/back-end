@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02a892e5-b7ea-4470-b940-5be75b19929c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SeedData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/services/UserServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SpotifyApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/services/FavesongServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SpotifyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/SpotifyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify/services/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/lambdaschool/spotify" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,12 +84,16 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="com.lambdaschool.spotify" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\java\com\lambdaschool\spotify" />
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\resources" />
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\views" />
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\services" />
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\repositories" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lambdaschool.spotify" />
@@ -99,12 +101,8 @@
       <recent name="com.lambdaschool" />
       <recent name="com.lambdaschool.spotify.models" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\resources" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test\java\com\lambdaschool\spotify" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\views" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\services" />
-      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\main\java\com\lambdaschool\spotify\repositories" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\infin\Desktop\lambdaschool\Build Weeks\back-end\src\test" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -112,8 +110,8 @@
       <command value="mvn clean heroku:deploy -X" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest.save">
-    <configuration name="UserServiceImplTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FavesongServiceImplTest.save">
+    <configuration name="FavesongServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +120,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
-      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.FavesongServiceImplTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FavesongServiceImplTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.FavesongServiceImplTest" />
       <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest.findByNameContaining" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FavesongServiceImplTest.findByUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
-      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="findByNameContaining" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.FavesongServiceImplTest" />
+      <option name="METHOD_NAME" value="findByUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest.findUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FavesongServiceImplTest.findFavesongById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -154,14 +168,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
-      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="findUserById" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.FavesongServiceImplTest" />
+      <option name="METHOD_NAME" value="findFavesongById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FavesongServiceImplTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -170,24 +184,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
-      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.FavesongServiceImplTest" />
       <option name="METHOD_NAME" value="save" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lambdaschool.spotify.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lambdaschool.spotify.services" />
-      <option name="MAIN_CLASS_NAME" value="com.lambdaschool.spotify.services.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -202,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceImplTest.save" />
-        <item itemvalue="JUnit.UserServiceImplTest.update" />
-        <item itemvalue="JUnit.UserServiceImplTest.findAll" />
-        <item itemvalue="JUnit.UserServiceImplTest.findByNameContaining" />
-        <item itemvalue="JUnit.UserServiceImplTest.findUserById" />
+        <item itemvalue="JUnit.FavesongServiceImplTest.save" />
+        <item itemvalue="JUnit.FavesongServiceImplTest.delete" />
+        <item itemvalue="JUnit.FavesongServiceImplTest.findByUserName" />
+        <item itemvalue="JUnit.FavesongServiceImplTest.findFavesongById" />
+        <item itemvalue="JUnit.FavesongServiceImplTest.findAll" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +224,7 @@
       <workItem from="1592954702940" duration="1766000" />
       <workItem from="1593012478245" duration="79000" />
       <workItem from="1593013722725" duration="4993000" />
+      <workItem from="1593026366792" duration="4127000" />
     </task>
     <servers />
   </component>
@@ -272,42 +271,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1592862340588" />
-    <state width="1877" height="290" key="GridCell.Tab.0.bottom" timestamp="1593020559269">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom" timestamp="1593029852967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
-    <state width="1877" height="290" key="GridCell.Tab.0.center" timestamp="1593020559269">
+    <state width="1877" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593029852967" />
+    <state width="1877" height="290" key="GridCell.Tab.0.center" timestamp="1593029852966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
-    <state width="1877" height="290" key="GridCell.Tab.0.left" timestamp="1593020559269">
+    <state width="1877" height="290" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593029852966" />
+    <state width="1877" height="290" key="GridCell.Tab.0.left" timestamp="1593029852966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
-    <state width="1877" height="290" key="GridCell.Tab.0.right" timestamp="1593020559269">
+    <state width="1877" height="290" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593029852966" />
+    <state width="1877" height="290" key="GridCell.Tab.0.right" timestamp="1593029852967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559269" />
-    <state width="1877" height="290" key="GridCell.Tab.1.bottom" timestamp="1593020559266">
+    <state width="1877" height="290" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593029852967" />
+    <state width="1877" height="290" key="GridCell.Tab.1.bottom" timestamp="1593027562489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
-    <state width="1877" height="290" key="GridCell.Tab.1.center" timestamp="1593020559266">
+    <state width="1877" height="290" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593027562489" />
+    <state width="1877" height="290" key="GridCell.Tab.1.center" timestamp="1593027562489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
-    <state width="1877" height="290" key="GridCell.Tab.1.left" timestamp="1593020559266">
+    <state width="1877" height="290" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593027562489" />
+    <state width="1877" height="290" key="GridCell.Tab.1.left" timestamp="1593027562489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
-    <state width="1877" height="290" key="GridCell.Tab.1.right" timestamp="1593020559266">
+    <state width="1877" height="290" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593027562489" />
+    <state width="1877" height="290" key="GridCell.Tab.1.right" timestamp="1593027562489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="290" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593020559266" />
-    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593013798201">
+    <state width="1877" height="290" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593027562489" />
+    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593026622526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593013798201" />
+    <state x="723" y="269" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1593026622526" />
     <state x="667" y="224" width="585" height="592" key="find.popup" timestamp="1592862785172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
