@@ -21,21 +21,13 @@ import java.util.List;
 public class UserServiceImpl
         implements UserService
 {
-    /**
-     * Connects this service to the User table.
-     */
+
     @Autowired
     private UserRepository userrepos;
 
-    /**
-     * Connects this service to the auditing service in order to get current user name
-     */
     @Autowired
     private UserAuditing userAuditing;
 
-    /**
-     * Connects this service to the helper functions for this application
-     */
     @Autowired
     private HelperFunctions helper;
 
